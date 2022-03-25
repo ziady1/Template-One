@@ -1,0 +1,359 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end Global Rules */
+/* controls */
+:root {
+  --main-color: #10cab7;
+  --second-color: #eee;
+}
+/* end controls */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* start header */
+header {
+  width: 100%;
+  height: 4vh;
+  background-color: white;
+}
+img.logo {
+  width: 6em;
+  padding: 20px;
+}
+.menu {
+  float: right;
+  padding: 20px;
+  position: relative;
+}
+.menu ul{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  background-color:var(--second-color);
+  border: 2px solid black;
+  right: 0;
+  top: calc(100%);
+  transition: 0.3s;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 200px;
+  display: none;
+}
+.menu ul::before {
+  content: "";
+  border: 1em solid;
+  border-color: transparent transparent var(--second-color) transparent;
+  position: absolute;
+  top: -32px;
+  right: 21px;
+}
+.menu:hover ul{
+  display: block;
+}
+.menu ul a:hover{
+  color: rgb(146, 32, 32);
+  padding-left: 2.5em;
+}
+.menu ul li:not(:last-child) a {
+  border-bottom: 1px solid black;
+}
+.menu ul li,
+.menu ul li a {
+  list-style: none;
+  text-decoration: none;
+    margin: 0px;
+  padding: 10px;
+  display: block;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+span.icon {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30px;
+  justify-content: flex-end;
+}
+.menu:hover span.icon span:nth-child(2) {
+  width: 100%;
+}
+.icon span {
+  margin-bottom: 5px;
+  background-color: black;
+}
+.icon span:first-child {
+  height: 2px;
+  width: 100%;
+}
+.icon span:nth-child(2) {
+  height: 2px;
+  width: 60%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.icon span:last-child {
+  height: 2px;
+  width: 100%;
+}
+/* end header */
+/* start landing */
+.first {
+  width: 100%;
+  height: 94vh;
+  background-image: url(../img/landing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first h1 {
+  color: var(--main-color);
+  font-size: 3em;
+}
+.first .container p {
+  width: 300px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* end landing */
+/* start features */
+.help {
+  background-color: #eee;
+  width: 100%;
+  padding-top: 7em;
+  padding-bottom: 7em;
+  text-align: center;
+  line-height: 2;
+}
+.help .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.helpp h3 {
+  font-weight: 800;
+  margin: 1.6em 0px;
+}
+.help p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.644);
+  width: 300px;
+  margin-left: auto;
+    margin-right: auto;
+}
+.fa-3x {
+  color: var(--main-color);
+}
+/* end features */
+/* start services */
+.col .servicess {
+  width: 400px;
+  display: flex;
+}
+.Services .container {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  display: grid;
+  gap: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.col .servicess i {
+  padding: 20px;
+  font-size: 2em;
+}
+.col .serv-img {
+  width: 300px;
+  height: 400px;
+  background-color: #2C4755;
+  background-image: url(/img/services.jpg);
+  position: relative;
+}
+.col .serv-img::after {
+  content: "";
+  top: -20%;
+  right: -50px;
+  width: 100px;
+  height: 140%;
+  position: absolute;
+  background-color: #2C4755;
+  z-index: -1;
+}
+/* end services */
+/* start portfolio */
+.Portfolio {
+  width: 100%;
+  height: 70vh;
+  background-color: #F6F6F6;
+}
+.card {
+  width: 30%;
+  background-color: white;
+}
+.card-info {
+  padding: 1em;
+}
+.card-info h3 {
+  margin-top: 4px;
+}
+.card-info p {
+  color: #777777;
+}
+.port-img {
+  max-width: 100%;
+}
+.porto {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4em;
+}
+.port-photo {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+}
+.port-text {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(172, 27, 27);
+}
+/* end portfolio */
+/* start about */
+.about {
+  width: 100%;
+  height: 80vh;
+}
+/* end about */
+.Services {
+  width: 100%;
+}
+.serv {
+  font-size: 5em;
+  text-align: center;
+  padding-top: 1em; 
+  color: var(--second-color);
+  letter-spacing: -4px;
+}
+.serv-info {
+  text-align: center;
+  margin-top: -90px;
+}
+@media (max-width: 767px) {
+  .serv {
+    font-size: 3em;
+    padding-top: 0.5em;
+  }
+  .serv-info {
+font-size: 1em;
+margin-top: -55px;
+  }
+}
+footer {
+  width: 100%;
+  height: 8vh;
+  background-color: #2c4755;
+  text-align: center;
+  line-height: 8vh;
+  color: white;
+  font-weight: 400;
+}
+.foot {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.card {
+  width: 30%;
+  background-color: white;
+}
+.card-info {
+  padding: 1em;
+}
+.card-info h3 {
+  margin-top: 4px;
+}
+.card-info p {
+  color: #777777;
+}
+.port-img {
+  max-width: 100%;
+}
+.porto {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4em;
+}
+.port-photo {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+}
+.port-text {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(172, 27, 27);
+}
+.mz{
+  margin-top: 0px;
+}
+.contact {
+  width: 100%;
+  background-color: #F6F6F6;
+  height: 55vh;
+}
+.contact .container .cont {
+  text-align: center;
+margin-top: 10em;
+line-height: 0.5;
+}
+.container .cont .f {
+  color: #2C4755;
+  font-size: 2em;
+  font-weight: 800;
+}
+.container .cont .e {
+  color: var(--main-color);
+  font-size: 2em;
+  font-weight: 800;
+  text-decoration: none;
+  display: block;
+}
+.container .cont div {
+  margin-top: 2em;
+  display: inline-block;
+}
